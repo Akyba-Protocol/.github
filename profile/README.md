@@ -12,7 +12,7 @@ Starting in Côte d’Ivoire, Akyba brings real-world DeFi to 330M+ unbanked adu
 
 - **Smart ROSCA, ASCA, and Auction contracts** (Cardano & Celo)
 - **Walletless access** (email + phone-based)
-- **Stablecoin contributions** (ADA, cUSD/eXOF)
+- **Stablecoin contributions** (ADA, cUSD/eXOF/cEUR)
 - **Agent-led onboarding for rural users**
 - **NFT-based identity & group tracking (CIP-68)**
 
