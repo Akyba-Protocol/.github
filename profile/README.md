@@ -4,7 +4,7 @@
 
 Akyba is a Web3-native protocol that transforms traditional tontines, ROSCAs, ASCAs, and solidarity funds into secure, transparent financial tools. Built on Cardano (and soon Celo), Akyba empowers mobile-first communities to save, borrow, and govern — with no prior crypto knowledge.
 
-> 🇨🇮 Starting in Côte d’Ivoire, Akyba brings real-world DeFi to 330M+ unbanked adults in sub-Saharan Africa using smart contracts, walletless onboarding, and stablecoins like cXOF and cUSD.
+Starting in Côte d’Ivoire, Akyba brings real-world DeFi to 330M+ unbanked adults in sub-Saharan Africa using smart contracts, walletless onboarding, and stablecoins like cXOF and cUSD.
 
 ---
 
