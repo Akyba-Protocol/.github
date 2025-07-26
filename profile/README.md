@@ -1,8 +1,4 @@
-<p align="center">
-  <img src="assets/logo.png" alt="Akyba Logo" width="120" />
-</p>
-
-<h1 align="center">Akyba Protocol</h1>
+# Akyba Protocol
 
 **Reinventing community finance for Africa using blockchain.**
 
