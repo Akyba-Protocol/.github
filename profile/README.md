@@ -1,6 +1,6 @@
 <p align="center">
-  <img src="./assets/logo.png" alt="Akyba Logo" height="80" style="vertical-align: middle;"/>
-  <span style="font-size: 2.5rem; font-weight: bold; vertical-align: middle;">Akyba Protocol</span>
+  <img src="./assets/logo.png" alt="Akyba Logo" height="40" style="vertical-align: middle;"/>
+  <span style="font-size: 2.5rem; font-weight: bold; vertical-align: middle;">#Akyba Protocol</span>
 </p>
 
 ---
