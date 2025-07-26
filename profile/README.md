@@ -1,4 +1,4 @@
-# 🪙 Akyba Protocol
+# Akyba Protocol
 
 **Reinventing community finance for Africa using blockchain.**
 
@@ -10,11 +10,11 @@ Starting in Côte d’Ivoire, Akyba brings real-world DeFi to 330M+ unbanked adu
 
 ## 🔧 What We’re Building
 
-- ✅ **Smart ROSCA, ASCA, and Auction contracts** (Cardano & Celo)
-- ✅ **Walletless access** (email + phone-based)
-- ✅ **Stablecoin contributions** (ADA, cUSD/eXOF)
-- ✅ **Agent-led onboarding for rural users**
-- ✅ **NFT-based identity & group tracking (CIP-68)**
+- **Smart ROSCA, ASCA, and Auction contracts** (Cardano & Celo)
+- **Walletless access** (email + phone-based)
+- **Stablecoin contributions** (ADA, cUSD/eXOF)
+- **Agent-led onboarding for rural users**
+- **NFT-based identity & group tracking (CIP-68)**
 
 ---
 
@@ -23,7 +23,7 @@ Starting in Côte d’Ivoire, Akyba brings real-world DeFi to 330M+ unbanked adu
 - 🌐 [Website](https://aikenakyba.web.app/)
 - 💬 [Telegram](https://t.me/akyba_protocol)
 - 🛠️ [GitHub Repos](https://github.com/akyba-protocol)
-- 📩 Contact: [support@akyba.io](mailto:support@akyba.io)
+- 📩 Contact: [support@akyba.io](mailto:angeyobo@gmail.com)
 
 ---
 
