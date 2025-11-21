@@ -1,8 +1,3 @@
-# **Akyba Protocol**
-
-### *(You can copy/paste this directly into your GitHub repo)*
-
-````markdown
 # Akyba Protocol  
 ### ROSCA v1.1.1 • ASCA v1.0.1 • CIP-68 Identity • Cardano eUTxO  
 **Fund 15 — Cardano Use Cases: Prototype & Launch**
