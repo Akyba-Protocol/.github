@@ -1,4 +1,4 @@
-# **Akyba Protocol — Catalyst F15 README.md**
+# **Akyba Protocol**
 
 ### *(You can copy/paste this directly into your GitHub repo)*
 
