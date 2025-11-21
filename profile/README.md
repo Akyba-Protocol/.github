@@ -2,13 +2,13 @@
 ### ROSCA v1.1.1 • ASCA v1.0.1 • CIP-68 Identity • Cardano eUTxO  
 **Fund 15 — Cardano Use Cases: Prototype & Launch**
 
----
+
 <img width="1041" height="539" alt="image" src="https://github.com/user-attachments/assets/0e56f0be-e130-4537-9fb8-ffb3e1009cd4" />
 
+Rosca Init action
 
-<img src="docs/diagrams/rosca.png" width="650"/>
 
----
+
 
 ## 1. Overview
 
