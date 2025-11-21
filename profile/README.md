@@ -10,219 +10,298 @@
 
 ## 1. Overview
 
-Akyba Protocol is a **decentralized savings and micro-credit primitive** built on Cardano.  
-It converts traditional community finance systems (ROSCA "tontines" and ASCA credit groups) into **transparent, permissionless, verifiable state machines** running fully on the eUTxO ledger.
+Akyba Protocol is a **decentralized savings and micro-credit primitive** built natively on Cardano.
 
-This repository hosts the **Catalyst prototype implementation** for Fund 15, including:
+It transforms traditional community finance models — ROSCA “tontines” and ASCA rotating credit groups — into **transparent, verifiable, and autonomous state machines** using:
 
-- Plutus V2 smart contracts  
-- CIP-68 membership identity system  
-- State Thread Token (STT) mechanism  
-- Off-chain backend services (TypeScript or Haskell)  
-- Minimal web/mobile UI for testnet interactions  
-- Documentation, diagrams, and formal whitepapers
+- Cardano’s **eUTxO** ledger  
+- **Aiken** smart contracts  
+- **CIP-68 membership identity tokens**  
+- **State Thread Token (STT)** for deterministic state transitions  
+- **Collateral-backed economic guarantees**
 
-Akyba aims to become the **first Cardano-native, high-volume, community-driven financial primitive** suitable for Africa, Asia, and global ROSCA/ASCA markets.
+This repository contains the source code, diagrams, specifications, and Catalyst deliverables for the Fund 15 prototype.
 
 ---
 
-## 2. Problem
+## 2. Live Prototype (Preview Testnet)
 
-Community savings systems (ROSCA/ASCA) suffer from:
+A functional prototype for **both ROSCA and ASCA** is already deployed on the Preview Testnet:
+
+### **https://aikenakyba.web.app**
+
+Current capabilities:
+
+- Create ROSCA or ASCA groups  
+- Mint STT + CIP-68 tokens  
+- Join groups  
+- Execute Init / Join flows  
+- Early Contribute, Distribute, and Loan Application flows (ongoing)  
+
+This Prototype will evolve into the full Catalyst deliverable.
+
+---
+
+## 3. Problem
+
+Community savings systems (ROSCA/ASCA) are widely used across Africa, Asia, and emerging markets.  
+Yet they suffer from:
 
 - lack of transparency  
-- risk of fraud or mismanagement  
-- no auditability  
-- no automated enforcement of contributions  
-- no collateral-based guarantees  
-- no fair loan governance  
-- no dispute resolution  
-- no standardized digital identity  
+- manual bookkeeping errors  
+- fraud and mismanagement  
+- unverified participants  
+- no structured collateral model  
+- no fair or auditable loan governance  
+- no digital identity  
+- no dispute-resistant rules  
 
-Billions of dollars circulate yearly in informal tontines.  
-No blockchain protocol currently provides a **verifiable, programmable, identity-bound implementation**.
+Billions of dollars circulate informally with **zero automation or verification**.
 
----
+No blockchain protocol today provides:
 
-## 3. Why Cardano?
+- fully on-chain ROSCA cycles  
+- CIP-68 identity + collateral  
+- slashing mechanisms  
+- fair loan voting  
+- immutable group rules  
 
-Cardano’s eUTxO model, native tokens, and Plutus V2 validators uniquely enable:
-
-- deterministic, immutable group rules  
-- CIP-68 metadata for on-chain identity  
-- token-bound membership  
-- state machines without global mutable state  
-- predictable, low-fee monthly cycles  
-- programmable collateral logic  
-- verifiable loan governance on-chain  
-
-Akyba is designed **exclusively** for Cardano’s architecture.  
-It is not a port from Ethereum.
+Akyba fills this gap decisively.
 
 ---
 
-## 4. Value Proposition and Ecosystem Gap
+## 4. Why Cardano?
 
-### 4.1 Ecosystem Research Summary  
-(Full research included in `/docs/ecosystem-research.md`)
+Cardano is uniquely suited for ROSCA/ASCA primitives because of:
+
+### **eUTxO deterministic state**
+Perfect for state machines like:
+- Init → Join → Start → Contribute → Distribute → End
+
+### **Aiken language**
+- safer smart contracts  
+- clearer type system  
+- faster audits  
+- ideal for financial logic
+
+### **CIP-68 identity**
+Each member has:
+- UserToken  
+- RefToken  
+- LoanApp Token (ASCA)  
+
+Bound directly to wallet + metadata.
+
+### **Native tokens (no smart contract tokens needed)**
+- Efficient collateral  
+- Predictable fees  
+- Long-term sustainability  
+
+Akyba is built **for Cardano** — not a port from EVM.
+
+---
+
+## 5. Value Proposition & Ecosystem Gap
+
+### 5.1 Ecosystem Research (summary)
+A detailed report is provided in:  
+`/docs/ecosystem-research.md`
 
 Findings:
 
-- No Catalyst project or live Cardano dApp implements a full ROSCA or ASCA engine.
-- No project provides on-chain CIP-68 membership + collateral slashing + contribution cycles.
-- Micro-lending tools exist but lack governance, state guarantees, or identity binding.
+- No existing project implements a **full ROSCA** or **ASCA** protocol on Cardano.
+- No CIP-68 identity-based savings circle exists.
+- No on-chain loan governance mechanism is available.
+- No collateral-slashing primitive exists for community finance.
 
-### 4.2 Uniqueness  
+### 5.2 What makes Akyba unique?
+
 Akyba introduces:
 
-- **CIP-68 programmable identity tokens per member**
-- **Collateral-backed savings cycles**
-- **State Thread Token state machine**  
-- **Loan application and voting flows**
-- **Batch contribution & distribution transactions**
-- **UTxO-based fairness guarantees**
+- **CIP-68 programmable membership identity**
+- **Collateral-backed fairness rules**
+- **STT-based deterministic group state**
+- **Contribution batching**
+- **Automatic slashing**
+- **Loan application + voting + governance**
+- **UTxO-based disbursement logic**
+- **Zero-custody funds control**
 
-Akyba is a **new financial primitive**, not a DeFi derivative.
-
----
-
-## 5. Architecture
-
-### 5.1 High-Level Components
-
-- `plutus/` – Smart contracts (ROSCA, ASCA, CIP-68 minting, STT)  
-- `offchain/` – Backend services (TypeScript or Haskell)  
-- `frontend/` – Minimal UI for testnet prototype  
-- `docs/` – Whitepapers, diagrams, specs
-
-### 5.2 Core Tokens
-
-- **STT** (State Thread Token): unique UTxO with group state  
-- **CIP-68 Tokens**:  
-  - UserToken  
-  - RefToken  
-  - LoanApp Token (ASCA)  
+Akyba is not DeFi cloning — it is a **new category** of Cardano financial infrastructure.
 
 ---
 
-## 6. Protocol Flow
+## 6. Architecture
 
-### 6.1 ROSCA (v1.1.1)
+### 6.1 Tech Stack
 
-<img src="docs/diagrams/rosca.png" width="650"/>
+| Layer | Technology |
+|-------|------------|
+| Smart Contracts | **Aiken** |
+| Identity / Metadata | **CIP-68** |
+| State Machine | **STT Token** |
+| Off-chain backend | **TypeScript** |
+| Frontend | Web (React / TypeScript) |
+| Diagrams | TikZ + PNG exports |
 
-Features:
-- Init → Join → Start → Contribute → Distribute → Rejoin → End → Withdraw  
-- Collateral slashing for late/missing contributions  
-- Batch contribution logic  
-- Winner nomination rules  
+### 6.2 Repository Structure
 
-### 6.2 ASCA (v1.0.1)
+```
 
-<img src="docs/diagrams/asca.png" width="650"/>
+/contracts         # Aiken smart contracts (ROSCA, ASCA, CIP-68, STT)
+/offchain          # TypeScript backend services
+/frontend          # Minimal UI for Catalyst prototype
+/docs              # Whitepaper, specs, diagrams, ecosystem research
+/docs/diagrams     # ROSCA, ASCA, eUTxO diagrams (PNG)
+/scripts           # Utility scripts for local/testnet deployment
 
-Features:
-- Loan application  
-- Voting (Yes / No with voting power = contributions)  
-- Borrow, Repay, Liquidate  
-- Unlock period  
-- Kick inactive members  
-- End group & refunds  
+````
 
-### 6.3 eUTxO Architecture
+### 6.3 eUTxO Architecture Diagram
 
 <img src="docs/diagrams/utxo.png" width="650"/>
 
 ---
 
-## 7. Whitepaper & Documentation
+## 7. Protocol Flow
+
+### 7.1 ROSCA (v1.1.1)
+
+<img src="docs/diagrams/rosca.png" width="650"/>
+
+Includes:
+
+- Init  
+- Join  
+- Start  
+- Contribute  
+- Distribute  
+- Rejoin  
+- End  
+- Withdraw  
+- Collateral slashing  
+
+### 7.2 ASCA (v1.0.1)
+
+<img src="docs/diagrams/asca.png" width="650"/>
+
+Includes:
+
+- Loan application  
+- Voting with voting power  
+- Borrow / Repay  
+- Liquidate  
+- Kick inactive members  
+- End group  
+- Withdraw  
+
+---
+
+## 8. Whitepaper & Documentation
 
 - **IEEE-style Whitepaper (PDF)**  
-  `/docs/Akyba-IEEE-Whitepaper.pdf`  
-- **ROSCA v1.1.1 Specification**  
-  `/docs/spec-rosca.md`  
-- **ASCA v1.0.1 Specification**  
-  `/docs/spec-asca.md`  
+  `/docs/Akyba-IEEE-Whitepaper.pdf`
+- **ROSCA Specification**  
+  `/docs/spec-rosca.md`
+- **ASCA Specification**  
+  `/docs/spec-asca.md`
+- **Ecosystem Research**  
+  `/docs/ecosystem-research.md`
 - **Technical Diagrams**  
-  `/docs/diagrams/*.png`  
+  `/docs/diagrams/*.png`
 
 ---
 
-## 8. Catalyst Prototype Goal (Fund 15)
+## 9. Catalyst Prototype Goal (Fund 15)
 
-Deliver a **working Akyba prototype** deployed to Cardano Preprod or Preview testnet, enabling:
+Deliver a fully working prototype deployed on Cardano Preview Testnet with:
 
-- Create a ROSCA or ASCA group  
-- Mint STT + CIP-68 tokens  
-- Join group  
-- Submit contributions  
-- Execute distributions 
-- Apply for loans (ASCA)  
-- Vote on loans  
-- Borrow & repay  
-- End group & withdraw  
-
-All via UI + backend + contracts.
-
-This aligns perfectly with Catalyst “prototype & launch”.
+- Aiken smart contracts implemented  
+- Full ROSCA + ASCA flows operational  
+- Frontend for end-to-end test cycles  
+- Documentation and user testing reports  
+- Community feedback integration  
 
 ---
 
-## 9. Milestones (≤ 12 months)
+## 10. Milestones (≤ 12 months)
 
 | Month | Milestone | Deliverable |
 |------|-----------|-------------|
-| 1–2  | Contract scaffolding + STT/CIP-68 | Smart contract structure |
-| 3–4  | Implement ROSCA contract | Init/Join/Start/Contribute/Distribute |
-| 5–6  | Implement ASCA contract | Loan flows + Voting + Repay |
-| 7–8  | Off-chain backend | APIs + integration |
-| 9    | Prototype UI | Web/mobile demo |
-| 10–11| Testnet deployment | Public access + documentation |
-| 12   | Community testing | Feedback report |
+| 1–2  | Implement STT, CIP-68, ROSCA base | Aiken contract scaffolding |
+| 3–4  | Full ROSCA engine | Init/Join/Contribute/Distribute |
+| 5–6  | ASCA engine | Loan apply/vote/borrow/repay |
+| 7–8  | Off-chain backend | API integration |
+| 9    | UI prototype | Web/mobile demo |
+| 10–11| Testnet deployment | Public testing + docs |
+| 12   | Community testing | Feedback + iteration report |
 
 ---
 
-## 10. Team
+## 11. Team
 
 ### Ange Thierry Yobo — Lead Architect  
-- Fintech CTO, Cardano developer  
-- Creator of Oxalio (tax infra) + AyaPay (mobile money)  
-- Expertise: UTxO, Java/Spring, TypeScript, full-stack finance systems  
-- GitHub: *link*  
-- LinkedIn: *link*
+- Fintech CEO, Cardano developer  
+- Full-stack architect: Java/Spring, TypeScript, Plutus/Aiken  
+- GitHub: *[add link](https://github.com/AngeYobo)*  
+- LinkedIn: *[add link](https://www.linkedin.com/in/angeyobo/)*
 
-### Co-Founders / Engineering  
-(Names + links added later)
+### Ariady Putra — Cardano Smart Contracts & Full-Stack Web3 Developer    
+- Senior Cardano smart contract engineer specializing in **Aiken**, Plutus, and eUTxO design  
+- Full-stack Web3 developer with hands-on experience in:  
+  - Aiken contract development  
+  - CIP-68 metadata token engineering  
+  - UTxO-based state machine patterns  
+  - React/TypeScript Web3 frontends  
+  - Off-chain infrastructure & transaction builders  
+- Strong contributor to the Akyba ROSCA/ASCA logic implementation  
+- Expertise bridging UI, off-chain code, and smart contracts into a unified user-facing experience  
+- GitHub: *[add link](https://github.com/ariady-putra)*  
+- LinkedIn: *[add link](https://www.linkedin.com/in/ariady/)*
 
 ---
 
-## 11. Running the Prototype (Placeholder)
+## 12. Running the Prototype
 
-This section will be updated as contracts are implemented.
+### Clone repository
 
 ```bash
-# clone
-git clone https://github.com/akylabs/akyba-protocol
-cd akyba-protocol
+git clone https://github.com/Akyba-Protocol
+cd Akyba-Protocol
+````
 
-# build plutus contracts
-cabal build
+### Build Aiken contracts
 
-# run backend server
+```bash
+cd contracts
+aiken build
+```
+
+### Run the backend (TypeScript)
+
+```bash
 cd offchain
 npm install
 npm run dev
-````
+```
+
+### Frontend
+
+```bash
+cd frontend
+npm install
+npm start
+```
 
 ---
 
-## 12. License
+## 13. License
 
-Apache 2.0 (to be confirmed)
+Apache 2.0
 
 ---
 
-## 13. Contact
+## 14. Contact
 
 Email: [contact@akyba.io](mailto:contact@akyba.io)
 Telegram: [https://t.me/akyba](https://t.me/akyba)
@@ -230,6 +309,5 @@ Twitter: [https://twitter.com/akyba](https://twitter.com/akyba)
 
 ---
 
-### Akyba is designed to become the **first large-scale Cardano-native financial primitive powering millions of global ROSCA and ASCA users**.
+### **Akyba is building Cardano’s first global, community-driven, high-volume financial primitive.**
 
-```
