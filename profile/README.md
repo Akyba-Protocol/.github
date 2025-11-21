@@ -159,7 +159,9 @@ Akyba is not DeFi cloning — it is a **new category** of Cardano financial infr
 
 ### 6.3 eUTxO Architecture Diagram
 
-<img src="docs/diagrams/utxo.png" width="650"/>
+<img width="547" height="328" alt="image" src="https://github.com/user-attachments/assets/e9aaa4ed-28b2-4821-8d7b-a522541490a8" />
+
+
 
 ---
 
