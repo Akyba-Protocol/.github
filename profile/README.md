@@ -3,9 +3,7 @@
 **Fund 15 — Cardano Use Cases: Prototype & Launch**
 
 
-<img width="1041" height="539" alt="image" src="https://github.com/user-attachments/assets/0e56f0be-e130-4537-9fb8-ffb3e1009cd4" />
-
-Rosca Init action
+<img src="docs/diagrams/rosca.png" width="650"/>
 
 
 
