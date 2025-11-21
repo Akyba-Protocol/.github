@@ -183,7 +183,8 @@ Includes:
 
 ### 7.2 ASCA (v1.0.1)
 
-<img src="docs/diagrams/asca.png" width="650"/>
+<img width="484" height="330" alt="image" src="https://github.com/user-attachments/assets/451dcafa-9d84-481c-acb6-6b2f6f1b9a26" />
+
 
 Includes:
 
