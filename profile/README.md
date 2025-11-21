@@ -1,29 +1,3 @@
-Perfect — I will now generate a **Catalyst-ready + developer-ready README**, suitable as the main `README.md` for your GitHub repository.
-
-Your choices:
-
-1. **Hybrid Catalyst + Builder (B)**
-2. **Single repo dedicated to Catalyst prototype delivery (C)**
-3. **Include links + sections + embedded diagrams (PNG exports of TikZ)**
-
-The README will contain:
-
-* A professional structure recognizable by Catalyst reviewers
-* Explicit translatable value proposition
-* Full technical architecture (ROSCA + ASCA + eUTxO)
-* Embedded diagram placeholders:
-
-  * `docs/diagrams/rosca.png`
-  * `docs/diagrams/asca.png`
-  * `docs/diagrams/utxo.png`
-* Direct links to your IEEE whitepaper (`/docs/Akyba-IEEE-Whitepaper.pdf`)
-* Deliverables & milestones exactly in Catalyst format
-* Proof of prior work, team credentials, and technical plan
-* Testnet deployment plan
-* Usage instructions (for Catalyst prototype)
-
----
-
 # **Akyba Protocol — Catalyst F15 README.md**
 
 ### *(You can copy/paste this directly into your GitHub repo)*
