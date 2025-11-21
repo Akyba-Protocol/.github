@@ -256,8 +256,8 @@ Deliver a fully working prototype deployed on Cardano Preview Testnet with:
   - Off-chain infrastructure & transaction builders  
 - Strong contributor to the Akyba ROSCA/ASCA logic implementation  
 - Expertise bridging UI, off-chain code, and smart contracts into a unified user-facing experience  
-- GitHub: *[add link](https://github.com/ariady-putra)*  
-- LinkedIn: *[add link](https://www.linkedin.com/in/ariady/)*
+- GitHub: [add link](https://github.com/ariady-putra)  
+- LinkedIn: [add link](https://www.linkedin.com/in/ariady/)
 
 ---
 
