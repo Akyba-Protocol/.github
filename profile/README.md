@@ -3,6 +3,49 @@
 **Fund 15 — Cardano Use Cases: Prototype & Launch**
 
 ---
+---
+title: Init
+config:
+  layout: elk
+  elk:
+    mergeEdges: true
+    nodePlacementStrategy: LINEAR_SEGMENTS
+  look: handDrawn
+---
+graph LR
+    TX[Transaction]
+
+    subgraph Creator Address
+        I1{{Nonce UTxO}}
+    end
+
+    subgraph Group Contributions SC
+        O1{{"`
+            STT Datum
+            STT
+        `"}}
+    end
+
+    subgraph Creator Collaterals SC
+        O2{{"`
+            CIP-68 Datum
+            CIP-68 RefToken
+            Collaterals Value
+        `"}}
+    end
+
+    subgraph Creator Address
+        O3{{CIP-68 UserToken}}
+    end
+
+    I1 --> TX
+    TX ==>|Mint STT| O1
+    TX ==>|"`
+      Mint RefToken,
+      Deposit Collaterals,
+      status = ACTIVE
+    `"| O2
+    TX ==>|Mint UserToken| O3
 
 <img src="docs/diagrams/rosca.png" width="650"/>
 
