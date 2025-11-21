@@ -3,9 +3,8 @@
 **Fund 15 — Cardano Use Cases: Prototype & Launch**
 
 
-<img width="484" height="330" alt="image" src="https://github.com/user-attachments/assets/df4ec5c9-636e-4200-9414-e7ab0ab4c393" />
 
-
+<img src="docs/diagrams/rosca.png" width="650"/>
 
 
 
@@ -168,7 +167,7 @@ Akyba is not DeFi cloning — it is a **new category** of Cardano financial infr
 
 ### 7.1 ROSCA (v1.1.1)
 
-<img src="docs/diagrams/rosca.png" width="650"/>
+<img width="484" height="330" alt="image" src="https://github.com/user-attachments/assets/df4ec5c9-636e-4200-9414-e7ab0ab4c393" />
 
 Includes:
 
