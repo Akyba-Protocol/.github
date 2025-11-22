@@ -2,12 +2,6 @@
 ### ROSCA v1.1.1 • ASCA v1.0.1 • CIP-68 Identity • Cardano eUTxO  
 **Fund 15 — Cardano Use Cases: Prototype & Launch**
 
-
-
-<img src="docs/diagrams/rosca.png" width="650"/>
-
-
-
 ## 1. Overview
 
 Akyba Protocol is a **decentralized savings and micro-credit primitive** built natively on Cardano.
