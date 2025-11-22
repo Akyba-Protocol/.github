@@ -26,7 +26,7 @@ This repository contains the source code, diagrams, specifications, and Catalyst
 
 ## 2. Live Prototype (Preview Testnet)
 
-A functional prototype for **both ROSCA and ASCA** is already deployed on the Preview Testnet:
+A functional prototype for **both ROSCA and ASCA** is already deployed on the **Preview Testnet**:
 
 ### **https://aikenakyba.web.app**
 
@@ -173,15 +173,16 @@ Akyba is not DeFi cloning — it is a **new category** of Cardano financial infr
 
 Includes:
 
-- Init  
-- Join  
-- Start  
-- Contribute  
-- Distribute  
-- Rejoin  
-- End  
-- Withdraw  
-- Collateral slashing  
+- **Init**: to initialize a ROSCA group
+- **Join**: to join a ROSCA group
+- **Leave**: to leave a ROSCA group
+- **Start**: to start a ROSCA group
+- **Contribute**: to contribute to a ROSCA group
+- **Distribute**: to distribute the prize every round
+- **Top-up Collateral**: to increase a participant's collateral
+- **Rejoin**: to rejoin a ROSCA group after being marked as not having enough collateral due to being slashed during a distribution phase
+- **End**: to cancel or to end a ROSCA group
+- **Withdraw**: to withdraw any residual collateral after the group has ended
 
 ### 7.2 ASCA (v1.0.1)
 
@@ -190,13 +191,20 @@ Includes:
 
 Includes:
 
-- Loan application  
-- Voting with voting power  
-- Borrow / Repay  
-- Liquidate  
-- Kick inactive members  
-- End group  
-- Withdraw  
+- **Init**: to initialize an ASCA group
+- **Join**: to join an ASCA group
+- **Leave**: to leave an ASCA group
+- **Start**: to start an ASCA group
+- **Contribute**: to contribute to an ASCA group
+- **Apply Loan**: to apply for a loan after the group is in the lending phase
+- **Close Loan**: to close a loan at any time as long as the borrow action has not been executed
+- **Vote Loan**: to vote on a loan application using the contribution count as the voting power
+- **Borrow Loan**: to withdraw the funds from the pool if the loan is approved
+- **Repay Loan**: to repay a loan
+- **Liquidate Loan**: to get lender's share of collateral of an unrepaid loan
+- **Kick**: to kick inactive members
+- **End**: to cancel or to end an ASCA group
+- **Withdraw**: to reclaim locked ADA by undeploying scripts deployed when joining the group
 
 ---
 
@@ -246,8 +254,8 @@ Deliver a fully working prototype deployed on Cardano Preview Testnet with:
 ### Ange Thierry Yobo — Lead Architect  
 - Fintech CEO, Cardano developer  
 - Full-stack architect: Java/Spring, TypeScript, Plutus/Aiken  
-- GitHub: *[add link](https://github.com/AngeYobo)*  
-- LinkedIn: *[add link](https://www.linkedin.com/in/angeyobo/)*
+- [GitHub](https://github.com/AngeYobo)
+- [LinkedIn](https://www.linkedin.com/in/angeyobo/)
 
 ### Ariady Putra — Cardano Smart Contracts & Full-Stack Web3 Developer    
 - Senior Cardano smart contract engineer specializing in **Aiken**, Plutus, and eUTxO design  
@@ -258,42 +266,52 @@ Deliver a fully working prototype deployed on Cardano Preview Testnet with:
   - React/TypeScript Web3 frontends  
   - Off-chain infrastructure & transaction builders  
 - Strong contributor to the Akyba ROSCA/ASCA logic implementation
-- GitHub: [add link](https://github.com/ariady-putra)  
-- LinkedIn: [add link](https://www.linkedin.com/in/ariady/)
+- [GitHub](https://github.com/ariady-putra)  
+- [LinkedIn](https://www.linkedin.com/in/ariady/)
 
 ---
 
 ## 12. Running the Prototype
 
-### Clone repository
+### Run online
+
+- Go to https://aikenakyba.web.app/
+- Set your wallet to **Preview Network**
+- Connect to the dApp
+
+> [!NOTE]
+> The current UI is NOT intended for actual end users.
+> It's just used during the development phase to interact with the smart contracts.
+
+### Run locally
+
+#### Clone repository
 
 ```bash
-git clone https://github.com/Akyba-Protocol
-cd Akyba-Protocol
+git clone https://github.com/Akyba-Protocol/mock-offchain-lucid.git
 ````
 
-### Build Aiken contracts
+#### Intall dependencies
 
 ```bash
-cd contracts
-aiken build
+pnpm i
 ```
 
-### Run the backend (TypeScript)
+> [!NOTE]
+> Install `pnpm` if you have not by running
+> ```bash
+> npm i -g pnpm
+> ```
+
+#### Run the offchain
 
 ```bash
-cd offchain
-npm install
-npm run dev
+pnpm dev
 ```
 
-### Frontend
-
-```bash
-cd frontend
-npm install
-npm start
-```
+- Go to http://localhost:5173/
+- Set your wallet to **Preview Network**
+- Connect to the dApp
 
 ---
 
