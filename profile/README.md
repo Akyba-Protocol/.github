@@ -153,7 +153,7 @@ Akyba is not DeFi cloning — it is a **new category** of Cardano financial infr
 
 ### 6.3 eUTxO Architecture Diagram
 
-<img width="547" height="328" alt="image" src="https://github.com/user-attachments/assets/e9aaa4ed-28b2-4821-8d7b-a522541490a8" />
+[<img width="547" height="328" alt="image" src="https://github.com/user-attachments/assets/e9aaa4ed-28b2-4821-8d7b-a522541490a8" />](url)
 
 
 
@@ -163,7 +163,7 @@ Akyba is not DeFi cloning — it is a **new category** of Cardano financial infr
 
 ### 7.1 ROSCA (v1.1.1)
 
-<img width="484" height="330" alt="image" src="https://github.com/user-attachments/assets/df4ec5c9-636e-4200-9414-e7ab0ab4c393" />
+[<img width="484" height="330" alt="image" src="https://github.com/user-attachments/assets/df4ec5c9-636e-4200-9414-e7ab0ab4c393" />](url)
 
 Includes:
 
@@ -180,7 +180,7 @@ Includes:
 
 ### 7.2 ASCA (v1.0.1)
 
-<img width="484" height="330" alt="image" src="https://github.com/user-attachments/assets/451dcafa-9d84-481c-acb6-6b2f6f1b9a26" />
+[<img width="484" height="330" alt="image" src="https://github.com/user-attachments/assets/451dcafa-9d84-481c-acb6-6b2f6f1b9a26" />](url)
 
 
 Includes:
