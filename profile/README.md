@@ -275,48 +275,22 @@ Deliver a fully working prototype deployed on Cardano Preview Testnet with:
 
 ## 12. Running the Prototype
 
-### Run online
-
-- Go to https://aikenakyba.web.app/
-- Set your wallet to **Preview Network**
-- Connect to the dApp
-
 > [!NOTE]
 > The current UI is NOT intended for actual end users.
 > It's just used during the development phase to interact with the smart contracts.
 
-### Run locally
-
-#### Clone repository
-
-```bash
-git clone https://github.com/Akyba-Protocol/mock-offchain-lucid.git
-```
-
-#### Intall dependencies
-
-```bash
-pnpm i
-```
-
-> [!NOTE]
-> Install `pnpm` if you have not by running
->
-> ```bash
-> npm i -g pnpm
-> ```
-
-#### Run the offchain
-
-```bash
-pnpm dev
-```
-
-- Go to http://localhost:5173/
+- Go to https://aikenakyba.web.app/
+- For the run, fill in your Blockfrost API Key
 - Set your wallet to **Preview Network**
 - Connect to the dApp
 
----
+Blockfrost API Key is manually filled once, and then it's stored in [`localStrorage`](https://developer.mozilla.org/docs/Web/API/Window/localStorage).
+
+You can clear your browser's local storage by viewing the **site information**, and then select **Cookies and site data**, manage **on-device site data**, delete saved data for **aikenakyba.web.app**
+
+For example, on Chromium:
+
+TODO: Video recording!
 
 ## 13. License
 
