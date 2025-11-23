@@ -284,11 +284,17 @@ Deliver a fully working prototype deployed on Cardano Preview Testnet with:
 - Set your wallet to **Preview Network**
 - Connect to the dApp
 
-Blockfrost API Key is manually filled once, and then it's stored in [`localStrorage`](https://developer.mozilla.org/docs/Web/API/Window/localStorage).
+[Blockfrost](https://blockfrost.io) API Key is manually filled once, and then it's stored in [`localStrorage`](https://developer.mozilla.org/docs/Web/API/Window/localStorage). Get your API Key by signing in into your Blockfrost dashboard.
 
 You can clear your browser's local storage by viewing the **site information**, and then select **Cookies and site data**, manage **on-device site data**, delete saved data for **aikenakyba.web.app**
 
 For example, on Chromium:
+
+| Step 1 | Step 2 | Step 3 |
+|:------:|:------:|:------:|
+| ![image](https://github.com/user-attachments/assets/48986be9-d17f-496c-a594-7ffa0b46a05a) | ![image](https://github.com/user-attachments/assets/084038c8-782c-4058-8775-053916c1fb72) | ![image](https://github.com/user-attachments/assets/f8a134df-42a2-4b2c-8882-ec5694639693) |
+
+This dApp has been tested to work properly with [Eternl](https://chromewebstore.google.com/detail/eternl/kmhcihpebfmpgmihbkipmjlmmioameka)
 
 TODO: Video recording!
 
