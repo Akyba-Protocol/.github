@@ -74,7 +74,102 @@ Cardano is uniquely suited for ROSCA/ASCA primitives because of:
 
 Perfect for state machines like:
 
-- Init → Join → Start → Contribute → Distribute → End
+```mermaid
+---
+---
+title: ROSCA
+---
+stateDiagram-v2
+    direction LR
+
+    Group: Every Round
+
+    Init: Creator Init
+    Join: Member Join
+    Leave: Member Leave
+    Start: Creator Start
+    Contribute: Creator and Members Contribute
+    Distribute: Distribution Phase
+    SlashCollateral: SLASH COLLATERAL
+    TopupCollateral: Top-up Collateral
+    InsufficientCollateral: INSUFFICIENT COLLATERAL
+    Rejoin: Rejoin
+    End: Creator End
+    Withdraw: Member Withdraw
+
+    if_state: Any missed Contribution?
+    state if_state <<choice>>
+
+    [*]  --> Init
+    Join --> Leave
+    Join --> Start
+    Init  --> Start
+    Start --> Group
+    state Group {
+        Contribute --> Distribute
+        Distribute --> if_state
+        if_state --> SlashCollateral: Enough Collateral
+        if_state --> InsufficientCollateral: NOT Enough Collateral
+        SlashCollateral --> TopupCollateral
+        InsufficientCollateral --> Rejoin
+        if_state --> Contribute: Next Round
+    }
+    Group --> End
+    End --> Withdraw
+    Withdraw --> [*]
+```
+
+```mermaid
+---
+---
+title: ASCA
+---
+stateDiagram-v2
+    Locked: Contribution Phase
+    Unlocked: Lending Phase
+
+    Init: Creator Init
+    Join: Member Join
+    Leave: Member Leave
+    Start: Creator Start
+    Contribute: Creator and Members Contribute
+    ApplyLoan: Apply Loan
+    CloseLoan: Close Loan
+    VoteLoan: Vote Loan
+    RepayLoan: Repay Loan
+    LiquidateLoan: Liquidate Loan
+    Kick: Creator Kicks Inactive Members
+    End: Creator End
+    Withdraw: Member Withdraw
+
+    state loan_approved <<choice>>
+    state miss_deadline <<choice>>
+
+    [*]  --> Init
+    Join --> Leave
+    Join --> Start
+    Init  --> Start
+    Start --> Locked
+    state Locked {
+        Contribute --> Contribute: Until Lending Phase
+    }
+    Locked --> Unlocked
+    Unlocked --> Leave
+    state Unlocked {
+      ApplyLoan --> CloseLoan: Cancel Loan
+      ApplyLoan --> VoteLoan
+      VoteLoan --> loan_approved
+      loan_approved --> CloseLoan: Loan Rejected
+      loan_approved --> miss_deadline: Loan Approved
+      miss_deadline --> RepayLoan: Before Deadline
+      miss_deadline --> LiquidateLoan: After Deadline
+    }
+    Unlocked --> Kick
+    Kick --> End
+    End --> Withdraw
+    Withdraw --> [*]
+    Leave --> [*]
+```
 
 ### **Aiken language**
 
