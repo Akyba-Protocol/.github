@@ -323,17 +323,27 @@ Deliver a fully working prototype deployed on Cardano Preview Testnet with:
 
 ---
 
-## 10. Milestones (≤ 12 months)
+## 10. Milestones (6.5 months)
 
-| Month | Milestone                         | Deliverable                     |
-| ----- | --------------------------------- | ------------------------------- |
-| 1–2   | Implement STT, CIP-68, ROSCA base | Aiken contract scaffolding      |
-| 3–4   | Full ROSCA engine                 | Init/Join/Contribute/Distribute |
-| 5–6   | ASCA engine                       | Loan apply/vote/borrow/repay    |
-| 7–8   | Off-chain backend                 | API integration                 |
-| 9     | UI prototype                      | Web/mobile demo                 |
-| 10–11 | Testnet deployment                | Public testing + docs           |
-| 12    | Community testing                 | Feedback + iteration report     |
+```mermaid
+gantt
+    title Catalyst Milestones
+    dateFormat YYYY-MM-DD
+    axisFormat Month %m
+    section On-chain
+        Complete ASCA                                                : ON1, 2026-01-01, 1M
+        Complete ROSCA                                               : ON2, after ON1, 1M
+        Enhance smart contracts to support stablecoins (any currency): ON3, after ON2, 3M
+    section Off-chain
+        Backend development : OFF1, 2026-01-01, 3M
+        Frontend development: OFF2, after OFF1, 3M
+    section Community Testing
+        Finalize: F15, after OFF2, 2w
+    M1: vert, M1, after ON2, 2m
+    M2: vert, M2, after OFF1, 1m
+    M3: vert, M3, after ON3, 2m
+    M4: vert, M4, after F15, 2w
+```
 
 ---
 
@@ -384,7 +394,9 @@ For example, on Chromium:
 
 This dApp has been tested to work properly with [Eternl](https://chromewebstore.google.com/detail/eternl/kmhcihpebfmpgmihbkipmjlmmioameka)
 
-TODO: Video recording!
+### Video Recording
+
+Coming Soon
 
 ## 13. License
 
@@ -395,7 +407,7 @@ Apache 2.0
 ## 14. Contact
 
 Email: [contact@akyba.app](mailto:contact@akyba.app)
-Telegram: ([https://t.me/akyba](https://t.me/akyba_protocol))
+Telegram: ([https://t.me/akyba_protocol](https://t.me/akyba_protocol))
 Twitter: [https://x.com/AkybaProtocol](https://x.com/AkybaProtocol)
 
 ---
