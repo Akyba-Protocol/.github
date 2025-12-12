@@ -205,7 +205,7 @@ Bound directly to wallet + metadata.
 - Predictable fees
 - Long-term sustainability
 
-Akyba is built **for Cardano** — not a port from EVM.
+Akyba is built **for Cardano**, not a port from EVM.
 
 ---
 
