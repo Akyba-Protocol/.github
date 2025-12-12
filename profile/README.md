@@ -13,7 +13,7 @@
 
 ### ROSCA v1.1.1 • ASCA v1.0.1 • CIP-68 Identity • Cardano eUTxO
 
-**Fund 15 — Cardano Use Cases: Prototype & Launch**
+**Fund 15 - Cardano Use Cases: Prototype & Launch**
 
 ## 1. Overview
 
@@ -236,7 +236,7 @@ Akyba introduces:
 - **UTxO-based disbursement logic**
 - **Zero-custody funds control**
 
-Akyba is not DeFi cloning — it is a **new category** of Cardano financial infrastructure.
+Akyba is not DeFi cloning, it is a **new category** of Cardano financial infrastructure.
 
 ---
 
@@ -360,14 +360,14 @@ gantt
 
 ## 11. Team
 
-### Ange Thierry Yobo — Lead Architect
+### Ange Thierry Yobo - Lead Architect
 
 - Cardano architect
 - Full-stack architect: Haskell, Java/Spring, TypeScript, Plutus/Aiken
 - [GitHub](https://github.com/AngeYobo)
 - [LinkedIn](https://www.linkedin.com/in/angeyobo/)
 
-### Ariady Putra — Cardano Smart Contracts & Full-Stack Web3 Developer
+### Ariady Putra - Cardano Smart Contracts & Full-Stack Web3 Developer
 
 - Senior Cardano smart contract engineer specializing in **Aiken**, Plutus, and eUTxO design
 - Full-stack Web3 developer with hands-on experience in:
