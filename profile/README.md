@@ -418,7 +418,7 @@ Apache 2.0
 ## 14. Contact
 
 Email: [contact@akyba.app](mailto:contact@akyba.app)
-Telegram: ([https://t.me/akyba_protocol](https://t.me/akyba_protocol))
+Telegram: ([https://t.me/AkybaProtocol](https://t.me/AkybaProtocol))
 Twitter: [https://x.com/AkybaProtocol](https://x.com/AkybaProtocol)
 
 ---
