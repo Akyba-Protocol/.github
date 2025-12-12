@@ -19,7 +19,7 @@
 
 Akyba Protocol is a **decentralized savings and micro-credit primitive** built natively on Cardano.
 
-It transforms traditional community finance models — ROSCA “tontines” and ASCA rotating credit groups — into **transparent, verifiable, and autonomous state machines** using:
+It transforms traditional community finance models, ROSCA “tontines” and ASCA rotating credit groups, into **transparent, verifiable, and autonomous state machines** using:
 
 - Cardano’s **eUTxO** ledger
 - **Aiken** smart contracts
