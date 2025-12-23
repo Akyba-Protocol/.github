@@ -362,7 +362,6 @@ gantt
 
 ### Ange Thierry Yobo - Lead Architect
 
-- Cardano architect
 - Full-stack architect: Haskell, Java/Spring, TypeScript, Plutus/Aiken
 - [GitHub](https://github.com/AngeYobo)
 - [LinkedIn](https://www.linkedin.com/in/angeyobo/)
