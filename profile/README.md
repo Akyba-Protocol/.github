@@ -1,16 +1,5 @@
 # Akyba Protocol
 
-<p align="center">
-  <a href="https://www.youtube.com/watch?v=oyt-GYmtFV8" target="_blank">
-    <img src="https://img.youtube.com/vi/oyt-GYmtFV8/maxresdefault.jpg" alt="Akyba doodle video" />
-  </a>
-  <br>
-  <a href="https://www.youtube.com/watch?v=oyt-GYmtFV8" target="_blank">
-    ▶ Watch on YouTube
-  </a>
-</p>
-
-
 ### ROSCA v1.1.1 • ASCA v1.0.1 • CIP-68 Identity • Cardano eUTxO
 
 **Fund 15 - Cardano Use Cases: Prototype & Launch**
